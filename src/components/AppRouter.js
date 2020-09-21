@@ -26,7 +26,6 @@ const AppRouter = ({ isLoggedIn, userObj }) => {
           )}
         </Switch>
       </Router>
-      <footer> &copy; {new Date().getFullYear()} Twitter</footer>
     </>
   );
 };

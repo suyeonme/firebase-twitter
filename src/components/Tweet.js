@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { dbService } from 'fbase';
+import { dbService, storageService } from 'fbase';
 
 const Tweet = ({ tweetObj, isOwner }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -10,7 +10,13 @@ const Tweet = ({ tweetObj, isOwner }) => {
 
   const handleDelete = async () => {
     const ok = window.confirm('Are you sure you want to delete this tweet?');
-    if (ok) await dbService.doc(`tweets/${tweetObj.id}`).delete();
+    if (ok) {
+      // Delete tweet from firestore
+      await dbService.doc(`tweets/${tweetObj.id}`).delete();
+
+      // Delete an image from storage
+      await storageService.refFromURL(tweetObj.imgStrUrl).delete();
+    }
   };
 
   const handleSubmit = async e => {
@@ -38,6 +44,14 @@ const Tweet = ({ tweetObj, isOwner }) => {
       ) : (
         <>
           <h4>{tweetObj.text}</h4>
+          {tweetObj.imgStrUrl && (
+            <img
+              src={tweetObj.imgStrUrl}
+              width="50px"
+              height="50px"
+              alt="Tweet"
+            />
+          )}
           {isOwner && (
             <>
               <button onClick={handleDelete}>Delete</button>
