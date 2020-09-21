@@ -5,17 +5,12 @@ import AppRouter from 'components/AppRouter';
 
 function App() {
   const [init, setInit] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
+    // Listen to change from authentication (login, logout, reset init app)
     authService.onAuthStateChanged(user => {
-      if (user) {
-        setIsLoggedIn(true);
-        setUserObj(user);
-      } else {
-        setIsLoggedIn(false);
-      }
+      if (user) setUserObj(user);
       setInit(true);
     });
   }, []);
@@ -23,7 +18,7 @@ function App() {
   return (
     <div>
       {init ? (
-        <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} />
+        <AppRouter isLoggedIn={userObj} userObj={userObj} />
       ) : (
         'Initializing...'
       )}
