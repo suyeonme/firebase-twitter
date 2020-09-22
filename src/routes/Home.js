@@ -7,7 +7,7 @@ import Tweet from 'components/Tweet';
 const Home = ({ userObj }) => {
   const [tweet, setTweet] = useState('');
   const [tweets, setTweets] = useState([]);
-  const [imgStr, setImgStr] = useState();
+  const [imgStr, setImgStr] = useState('');
 
   useEffect(() => {
     // Listen changing from firestore (update in realtime)

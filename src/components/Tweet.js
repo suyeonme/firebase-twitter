@@ -15,7 +15,8 @@ const Tweet = ({ tweetObj, isOwner }) => {
       await dbService.doc(`tweets/${tweetObj.id}`).delete();
 
       // Delete an image from storage
-      await storageService.refFromURL(tweetObj.imgStrUrl).delete();
+      if (tweetObj.imgStrUrl !== '')
+        await storageService.refFromURL(tweetObj.imgStrUrl).delete();
     }
   };
 
