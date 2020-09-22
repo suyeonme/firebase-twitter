@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/suyeonme/twitter-clone/static/css/main.606f8e17.chunk.css",
+    "main.js": "/suyeonme/twitter-clone/static/js/main.d8ebef46.chunk.js",
+    "main.js.map": "/suyeonme/twitter-clone/static/js/main.d8ebef46.chunk.js.map",
+    "runtime-main.js": "/suyeonme/twitter-clone/static/js/runtime-main.f17e3c3c.js",
+    "runtime-main.js.map": "/suyeonme/twitter-clone/static/js/runtime-main.f17e3c3c.js.map",
+    "static/js/2.2722ebb1.chunk.js": "/suyeonme/twitter-clone/static/js/2.2722ebb1.chunk.js",
+    "static/js/2.2722ebb1.chunk.js.map": "/suyeonme/twitter-clone/static/js/2.2722ebb1.chunk.js.map",
+    "index.html": "/suyeonme/twitter-clone/index.html",
+    "precache-manifest.7de75ded1d2db4e2781ade961a505b7e.js": "/suyeonme/twitter-clone/precache-manifest.7de75ded1d2db4e2781ade961a505b7e.js",
+    "service-worker.js": "/suyeonme/twitter-clone/service-worker.js",
+    "static/css/main.606f8e17.chunk.css.map": "/suyeonme/twitter-clone/static/css/main.606f8e17.chunk.css.map",
+    "static/js/2.2722ebb1.chunk.js.LICENSE.txt": "/suyeonme/twitter-clone/static/js/2.2722ebb1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f17e3c3c.js",
+    "static/js/2.2722ebb1.chunk.js",
+    "static/css/main.606f8e17.chunk.css",
+    "static/js/main.d8ebef46.chunk.js"
+  ]
+}
